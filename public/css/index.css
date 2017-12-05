@@ -1,0 +1,371 @@
+@media only screen and (min-width: 993px) {
+  .container
+  {
+    width: 85%;
+  }
+}
+
+@media only screen and (min-width: 1201px) {
+  .container
+  {
+    width: 90%;
+  }
+}
+
+@media (max-width:700px) {
+  #EmailAddress, #EmailOff
+  {
+    display: none !important;
+  }
+}
+
+.container
+{
+    max-width: 1480px;
+    padding-top: 16px;
+}
+
+body
+{
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      rgba(255, 255, 255, 0.65),
+      rgba(255, 255, 255, 0.65)
+    ),
+    url("../images/cardboard_flat.png");
+  background-repeat: repeat;
+}
+
+.nav-content
+{
+  height: 48px;
+}
+
+ul.tabs
+{
+  display: inline-block;
+  width: calc(100% - 100px);
+}
+
+#Emails
+{
+  display: inline-block;
+  width: 100px;
+  position: absolute;
+  right: 0;
+  top: 15px;
+}
+
+#EmailAddress
+{
+  display: none;
+}
+
+.switch label input[type=checkbox] ~ span:not(.lever)
+{
+  position: absolute;
+  right: 100%;
+  width: 400px;
+  text-align: right;
+  top: 3px;
+  opacity: 0;
+  transition: opacity 0.3s linear;
+  color: #fff;
+}
+
+#Emails:hover .switch label input[type=checkbox] ~ span:not(.lever)
+{
+  opacity: 1;
+}
+
+.switch label input[type=checkbox]:checked ~ #EmailOff
+{
+  display: none;
+}
+
+.switch label input[type=checkbox]:checked ~ #EmailAddress
+{
+  display: inline-block;
+}
+
+.tab .badge
+{
+  color: #fff;
+}
+
+section
+{
+  height: calc(100% - 113px);
+  padding-bottom: 40px;
+  margin-top: 1px;
+  width: 100%;
+  overflow-y: auto;
+}
+
+section > .container > .row
+{
+  height: calc(100vh - 129px);
+  margin-bottom: 0;
+}
+
+.forms
+{
+  text-align: center;
+  background: rgba(0,0,0,0.5);
+  position: absolute;
+  display: none;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.searchBar
+{
+  width: calc(100% - 80px);
+  padding-left: 16px;
+}
+
+.searchBar, .searchBar + i.material-icons
+{
+  display: inline-block;
+  vertical-align: top;
+}
+
+#Search
+{
+  height: 44px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#Search:focus
+{
+  background: #2196F3;
+  color: #fff;
+  border-bottom: 1px solid #03346b;
+  box-shadow: 0 1px 0 0 #03346b;
+}
+
+#Search:focus + label > i, #Search:focus ~ i
+{
+  color: #fff !important;
+}
+
+#Search + label
+{
+    top: -21px;
+}
+
+#Search ~ i
+{
+    top: -9px;
+}
+
+#AddJob
+{
+  cursor: pointer;
+}
+
+#NewJob
+{
+  text-align: left;
+  position: absolute;
+  top: 10vh;
+  left: calc(50% - 300px);
+  width: 600px;
+  z-index: 10;
+}
+
+.closeForm
+{
+  cursor: pointer;
+}
+
+.formButtons
+{
+  position: relative;
+}
+
+.formButtons button[type=submit]
+{
+  float: right;
+  margin-left: 16px;
+}
+
+label + output
+{
+  font-size: .8rem;
+  color: #9e9e9e;
+  margin-left: 16px;
+}
+
+.person
+{
+  display: inline-block;
+}
+
+.person img
+{
+  display: inline-block;
+  height: 32px;
+  width: 32px;
+  border-radius: 32px;
+  margin-right: 8px;
+  text-align: center;
+}
+
+.person  i
+{
+  margin-top: calc(50% + 5px);
+  top: 0;
+  position: absolute;
+}
+
+.assign
+{
+  cursor: pointer;
+  position: relative;
+  vertical-align: top;
+}
+
+.failSearch
+{
+  display: none;
+}
+
+#Choice
+{
+  text-align: left;
+  display: inline-block;
+  margin-top: 80px;
+  height: 350px;
+  z-index: 100;
+}
+
+.choiceQuestion
+{
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+}
+
+.choiceImage
+{
+  height: 200px;
+  margin-bottom: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.choiceOption
+{
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  min-width: 240px;
+  padding: 0 16px 16px 16px;
+  margin-top: 16px;
+  cursor: pointer;
+}
+
+.choiceOption:nth-child(n+3)
+{
+  border-left: 1px solid #e0e0e0;
+}
+
+.choiceLabel
+{
+
+}
+
+/*   materialize */
+
+/* label color */
+  .input-field label, label[for], .dropdown-content li>a, .dropdown-content li>span {
+    color: #1565C0;
+  }
+  /* label focus color */
+  .input-field input[type=text]:focus + label, .input-field textarea:focus + label {
+    color: #1565C0  !important;
+  }
+  /* label underline focus color */
+  input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly])
+  {
+    border-bottom: 1px solid #1565C0 !important;
+    box-shadow: 0 1px 0 0 #1565C0 !important;
+  }
+  /* valid color */
+  .input-field input[type=text].valid {
+    border-bottom: 1px solid #1565C0;
+    box-shadow: 0 1px 0 0 #1565C0;
+  }
+  /* invalid color */
+  .input-field input[type=text].invalid {
+    border-bottom: 1px solid #e53935;
+    box-shadow: 0 1px 0 0 #e53935;
+  }
+  /* icon prefix focus color */
+  .input-field .prefix.active, input[type=range]+.thumb .value
+  {
+    color: #1565C0;
+  }
+
+  .picker__day--selected, .picker__day--selected:hover, .picker--focused .picker__day--selected, input[type=range]+.thumb
+  {
+    background-color: #1565C0;
+  }
+
+  .switch label input[type=checkbox]:checked+.lever
+  {
+    background-color: rgba(255, 255, 255, 0.4)
+  }
+
+  input[type=range]::-webkit-slider-thumb {
+    background-color: #1565C0;
+  }
+  input[type=range]::-moz-range-thumb {
+    background-color: #1565C0;
+  }
+  input[type=range]::-ms-thumb {
+    background-color: #1565C0;
+  }
+
+  [type="checkbox"]:checked+label:before
+  {
+    border-right-color: #1565C0;
+    border-bottom-color: #1565C0;
+  }
+
+  .input-field.col .dropdown-content [type="checkbox"]+label
+  {
+    top: -10px;
+  }
+
+  .picker__date-display
+  {
+    background-color: #0D47A1 ;
+  }
+
+ .switch label input[type=checkbox]:checked+.lever:after
+ {
+   background-color: #0d2e60;
+ }
+
+  .picker__close, .picker__today, .picker__day.picker__day--today
+  {
+    color: #1565C0;
+  }
+
+  button.picker__today:focus, button.picker__close:focus
+  {
+    background-color: #bcd8fa;
+  }
+
+   button.picker__clear:focus,
+   {
+     background-color: #ffd3d5;
+   }

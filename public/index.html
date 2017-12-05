@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="jobs_noticeboard_icon.ico" type="image/x-icon">
+    <title>Jobs Noticeboard</title>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/index.css"/>
+    <link type="text/css" rel="stylesheet" href="css/jobCards.css"/>
+
+
+    <script defer src="/__/firebase/4.5.0/firebase-app.js"></script>
+    <script defer src="/__/firebase/4.5.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/4.5.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/4.5.0/firebase-firestore.js"></script>
+    <!--<script defer src="/__/firebase/4.5.0/firebase-messaging.js"></script>-->
+    <!--<script defer src="/__/firebase/4.5.0/firebase-storage.js"></script>-->
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="js/md5.js"></script>
+
+    <script src="scripts/data.js"></script>
+    <script src="scripts/factory.js"></script>
+    <script src="scripts/errors.js"></script>
+    <script src="scripts/search.js"></script>
+    <script src="scripts/settings.js"></script>
+    <script src="scripts/events.js"></script>
+    <script src="scripts/init.js"></script>
+
+    <script src="scripts/mountains.js"></script>
+
+  </head>
+  <body>
+      <nav class="nav-extended">
+        <div class="nav-wrapper  blue darken-4">
+          <form class="searchBar">
+            <div class="input-field">
+              <input id="Search" type="search" required>
+              <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+              <i class="material-icons">close</i>
+            </div>
+          </form>
+          <i id="AddJob" class="material-icons">add_box</i>
+        </div>
+        <div class="nav-content blue darken-3">
+          <ul class="tabs tabs-transparent">
+            <li class="tab"><a class="active" href="#Assigned">Assigned To<span class="badge jobCount"></span></a></li>
+            <li class="tab"><a href="#OpenJobs">Open Jobs<span class="badge jobCount"></span></a></li>
+            <li class="tab"><a href="#Created">Created<span class="badge jobCount"></span></a></li>
+            <li class="tab"><a href="#Completed">Completed<span class="badge jobCount"></span></a></li>
+          </ul>
+          <div id="Emails">
+            <div class="switch">
+              <label>
+                <input type="checkbox" id="EmailBox">
+                <span class="lever"></span>
+                <span id="EmailOff">Emails Off</span>
+                <span id="EmailAddress">No address found</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <section id="Assigned">
+        <div class="container">
+          <div class="row">
+          </div>
+        </div>
+      </section>
+      <section id="OpenJobs">
+        <div class="container">
+          <div class="row">
+          </div>
+        </div>
+      </section>
+      <section id="Created">
+        <div class="container">
+          <div class="row">
+          </div>
+        </div>
+      </section>
+      <section id="Completed">
+        <div class="container">
+          <div class="row">
+          </div>
+        </div>
+      </section>
+      <div class="forms">
+      </div>
+  </body>
+</html>
